@@ -1,34 +1,29 @@
-package springboot_25_26_ING_3_ISI_FR_groupe_5.entites;
+package entites;
 
 import springboot_25_26_ING_3_ISI_FR_groupe_5.enums.TypeNiveau;
 import springboot_25_26_ING_3_ISI_FR_groupe_5.enums.TypeSexe;
 
 import java.util.Date;
 
-public class Etudiant {
-    private  int id;
-    private String nom;
+public class Etudiant extends Utilisateur {
+
     private String prenom;
-    private String email;
     private String adresse;
-    private String telephone;
+
     private String  matricule;
     private TypeNiveau niveau;
     private  TypeSexe sexe;
 
     private Date date_naissance;
 
-    public Etudiant(String adresse, Date date_naissance, String email, int id, String matricule, TypeNiveau niveau, String nom, String prenom, TypeSexe sexe, String telephone) {
+    public Etudiant(int id, String nom, String email, String telephon, String adresse, Date date_naissance, String matricule, TypeNiveau niveau, String prenom, TypeSexe sexe) {
+        super(id, nom, email, telephon);
         this.adresse = adresse;
         this.date_naissance = date_naissance;
-        this.email = email;
-        this.id = id;
         this.matricule = matricule;
         this.niveau = niveau;
-        this.nom = nom;
         this.prenom = prenom;
         this.sexe = sexe;
-        this.telephone = telephone;
     }
 
     public String getAdresse() {
@@ -47,22 +42,6 @@ public class Etudiant {
         this.date_naissance = date_naissance;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getMatricule() {
         return matricule;
     }
@@ -79,14 +58,6 @@ public class Etudiant {
         this.niveau = niveau;
     }
 
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
     public String getPrenom() {
         return prenom;
     }
@@ -101,14 +72,6 @@ public class Etudiant {
 
     public void setSexe(TypeSexe sexe) {
         this.sexe = sexe;
-    }
-
-    public String getTelephone() {
-        return telephone;
-    }
-
-    public void setTelephone(String telephone) {
-        this.telephone = telephone;
     }
 }
 
