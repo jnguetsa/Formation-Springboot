@@ -1,10 +1,11 @@
 package entites;
 
-import springboot_25_26_ING_3_ISI_FR_groupe_5.enums.TypeNiveau;
-import springboot_25_26_ING_3_ISI_FR_groupe_5.enums.TypeSexe;
+import jakarta.persistence.Entity;
+import enums.TypeNiveau;
+import enums.TypeSexe;
 
 import java.util.Date;
-
+@Entity
 public class Etudiant extends Utilisateur {
 
     private String prenom;

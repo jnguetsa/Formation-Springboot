@@ -1,5 +1,8 @@
 package entites;
 
+import jakarta.persistence.Entity;
+
+@Entity
 public class Institut {
     private  int id;
     private  String nom;

@@ -1,7 +1,9 @@
 package entites;
 
-import javax.annotation.processing.Generated;
+import jakarta.persistence.Entity;
 
+import javax.annotation.processing.Generated;
+@Entity
 
 public class Filiere {
     private int id;

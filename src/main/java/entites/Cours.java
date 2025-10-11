@@ -1,7 +1,9 @@
 package entites;
 
-import java.util.Date;
+import jakarta.persistence.Entity;
 
+import java.util.Date;
+@Entity
 public class Cours {
     private  int id ;
     private  String titre;

@@ -1,7 +1,9 @@
 package entites;
 
-import java.util.Date;
+import jakarta.persistence.Entity;
 
+import java.util.Date;
+@Entity
 public class FICHE_PRESENCE {
     private int id;
     private Date date;

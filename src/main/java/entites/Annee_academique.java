@@ -1,10 +1,14 @@
 package entites;
 
-import springboot_25_26_ING_3_ISI_FR_groupe_5.enums.Num_semestre;
+import jakarta.persistence.*;
+import enums.Num_semestre;
 
 import java.util.Date;
-
+@Entity
+@Table(name="annee_academique")
 public class Annee_academique {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  int id;
     private  String nom;
     private Date date_debut;

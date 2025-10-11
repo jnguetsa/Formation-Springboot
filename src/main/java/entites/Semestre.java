@@ -1,9 +1,10 @@
 package entites;
 
-import springboot_25_26_ING_3_ISI_FR_groupe_5.enums.Num_semestre;
+import jakarta.persistence.Entity;
+import enums.Num_semestre;
 
 import java.util.Date;
-
+@Entity
 public class Semestre {
     private  int id;
     private Num_semestre semestre;
