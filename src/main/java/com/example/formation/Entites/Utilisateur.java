@@ -1,5 +1,4 @@
-package entites;
-
+package com.example.formation.entites;
 
 public class Utilisateur {
 

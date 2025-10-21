@@ -1,4 +1,4 @@
-package entites;
+package com.example.formation.entites;
 
 import jakarta.persistence.Entity;
 import enums.Num_semestre;
