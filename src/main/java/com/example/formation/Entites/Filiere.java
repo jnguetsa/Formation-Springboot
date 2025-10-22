@@ -3,7 +3,7 @@ package com.example.formation.entites;
 import jakarta.persistence.Entity;
 
 import javax.annotation.processing.Generated;
-@Entity
+
 
 public class Filiere {
     private int id;

@@ -2,7 +2,7 @@ package com.example.formation.entites;
 
 import jakarta.persistence.Entity;
 
-@Entity
+
 public class Enseignant extends  Utilisateur {
 
     private String grade;

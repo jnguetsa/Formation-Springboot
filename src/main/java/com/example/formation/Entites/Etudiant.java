@@ -5,7 +5,7 @@ import enums.TypeNiveau;
 import enums.TypeSexe;
 
 import java.util.Date;
-@Entity
+
 public class Etudiant extends Utilisateur {
 
     private String prenom;

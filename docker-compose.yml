@@ -1,27 +1,18 @@
-version: '3.8'
 services:
   db:
     image: postgres:17-alpine
     restart: always
-    shm_size: 128mb
     environment:
-      POSTGRES_DB: formation
+      POSTGRES_DB: formation1
       POSTGRES_USER: root
       POSTGRES_PASSWORD: root
     ports:
       - "5433:5432"
-    volumes:
-      - postgres-data:/var/lib/postgresql/data
-    networks:
-      - app-network
-
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - "8081:8082"
-    depends_on:
-      - db
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U root -d formation1"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
     networks:
       - app-network
 
@@ -30,20 +21,29 @@ services:
       context: .
       dockerfile: Dockerfile
     restart: always
+    depends_on:
+      db:
+        condition: service_healthy
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/formation
-      - SPRING_DATASOURCE_USERNAME=root
-      - SPRING_DATASOURCE_PASSWORD=root
-
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/formation1
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_SHOW_SQL: "true"
     ports:
       - "8080:8080"
+    networks:
+      - app-network
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8081:8080"
     depends_on:
       - db
     networks:
       - app-network
-
-volumes:
-  postgres-data:
 
 networks:
   app-network:

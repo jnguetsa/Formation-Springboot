@@ -3,11 +3,10 @@ package com.example.formation.entites;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 import java.util.Date;
-@Entity
 public class Cours {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  int id ;
     private  String titre;
     private int  nb_heure;

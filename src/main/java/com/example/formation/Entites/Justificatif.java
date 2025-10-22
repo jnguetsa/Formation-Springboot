@@ -3,7 +3,7 @@ package com.example.formation.entites;
 import jakarta.persistence.Entity;
 import enums.StatutJustificatif;
 import enums.TypeJustificatif;
-@Entity
+
 public class Justificatif {
     private int id;
     private String contenu;

@@ -3,7 +3,7 @@ package com.example.formation.entites;
 import jakarta.persistence.Entity;
 
 import java.util.Date;
-@Entity
+
 public class FICHE_PRESENCE {
     private int id;
     private Date date;
