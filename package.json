@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tailwind: watch": " npx @tailwindcss/cli -i ./src/main/resources/static/css/input.css -o ./src/main/resources/static/css/output.css --watch",
-    "tailwind: deploy": " npx @tailwindcss/cli -i ./src/main/resources/static/css/input.css -o ./src/main/resources/static/css/output.css --minify"
+    "tailwind:watch": "npx @tailwindcss/cli -i src/main/resources/static/css/input.css -o src/main/resources/static/css/output.css --watch",
+    "tailwind:deploy": "npx @tailwindcss/cli -i src/main/resources/static/css/input.css -o src/main/resources/static/css/output.css --minify"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +14,8 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.1.15",
     "tailwindcss": "^4.1.15"
+  },
+  "devDependencies": {
+    "daisyui": "^5.3.7"
   }
 }
