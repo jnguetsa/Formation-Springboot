@@ -1,4 +1,4 @@
-package com.example.formation.entites;
+package com.example.formation.Entites;
 
 public class Utilisateur {
 

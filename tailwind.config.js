@@ -1,8 +1,10 @@
 module.exports = {
-  content: ["./src/main/resources/templates/**/* .html"],
-
+  content: [
+    "./src/main/resources/templates/**/*.{html,js}", // Inclut les fichiers Thymeleaf
+    "./src/main/resources/static/**/*.{html,js}",
+  ],
   theme: {
-    extends: {},
+    extend: {},
   },
-  plugin: [],
+  plugins: [require("daisyui")],
 };

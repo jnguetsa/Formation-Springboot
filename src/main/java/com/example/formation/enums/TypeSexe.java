@@ -1,5 +1,5 @@
-package enums;
+package com.example.formation.enums;
 
 public enum TypeSexe {
-    HOMME,FEMME
+    H,F
 }
