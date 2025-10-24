@@ -11,9 +11,8 @@ import jakarta.persistence.Id;
 import java.util.Date;
 @Entity
 public class Etudiant extends Utilisateur {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+
+
     private String prenom;
     private String adresse;
 

@@ -1,24 +1,33 @@
 package com.example.formation.Entites;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Utilisateur {
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected int id;
     protected String nom;
     protected String email;
     protected String telephon;
 
+    // ⭐⭐ CONSTRUCTEUR SANS ARGUMENT (déjà présent - à garder) ⭐⭐
+    public Utilisateur() {
+    }
 
-    public Utilisateur(int id,  String nom, String email,  String telephon) {
+    // ⭐⭐ AJOUT : NOUVEAU CONSTRUCTEUR SANS ID ⭐⭐
+    public Utilisateur(String nom, String email, String telephon) {
+        this.nom = nom;
         this.email = email;
+        this.telephon = telephon;
+    }
+
+    // ⭐⭐ ANCIEN CONSTRUCTEUR AVEC ID (à garder pour compatibilité) ⭐⭐
+    public Utilisateur(int id, String nom, String email, String telephon) {
         this.id = id;
         this.nom = nom;
+        this.email = email;
         this.telephon = telephon;
     }
 
@@ -46,12 +55,6 @@ public class Utilisateur {
         this.email = email;
     }
 
-
-
-
-
-
-
     public String getTelephon() {
         return telephon;
     }
@@ -59,7 +62,4 @@ public class Utilisateur {
     public void setTelephon(String telephon) {
         this.telephon = telephon;
     }
-
-
-
 }

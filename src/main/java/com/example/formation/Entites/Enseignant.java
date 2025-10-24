@@ -1,20 +1,21 @@
 package com.example.formation.Entites;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
-public class Enseignant extends  Utilisateur {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+@PrimaryKeyJoinColumn(name = "id")
+public class Enseignant extends Utilisateur {
+
     private String grade;
     private String specialite;
 
-    public Enseignant(int id, String nom, String email, String telephon, String grade, String specialite) {
-        super(id, nom, email, telephon);
+    // Constructeur par défaut requis par JPA
+    public Enseignant() {
+        super();
+    }
+
+    public Enseignant(String nom, String email, String telephone, String grade, String specialite) {
+        super(nom, email, telephone);
         this.grade = grade;
         this.specialite = specialite;
     }
