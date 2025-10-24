@@ -1,19 +1,25 @@
 package com.example.formation.Entites;
 
+import com.example.formation.enums.TypeNiveau;
+import com.example.formation.enums.TypeSexe;
 import jakarta.persistence.Entity;
-import enums.TypeNiveau;
-import enums.TypeSexe;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 
 import java.util.Date;
-
+@Entity
 public class Etudiant extends Utilisateur {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private String prenom;
     private String adresse;
 
     private String  matricule;
     private TypeNiveau niveau;
-    private  TypeSexe sexe;
+    private TypeSexe sexe;
 
     private Date date_naissance;
 

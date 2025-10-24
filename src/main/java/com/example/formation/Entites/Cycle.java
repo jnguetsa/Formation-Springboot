@@ -1,7 +1,7 @@
-package com.example.formation.entites;
+package com.example.formation.Entites;
 
+import com.example.formation.enums.TypeNiveau;
 import jakarta.persistence.Entity;
-import enums.TypeNiveau;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;

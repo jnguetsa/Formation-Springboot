@@ -1,7 +1,7 @@
 package com.example.formation.Entites;
 
 import jakarta.persistence.*;
-import enums.Num_semestre;
+
 
 import java.util.Date;
 @Entity

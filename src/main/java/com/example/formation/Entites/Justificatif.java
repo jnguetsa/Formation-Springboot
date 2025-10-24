@@ -1,14 +1,15 @@
 package com.example.formation.Entites;
 
+import com.example.formation.enums.StatutJustificatif;
+import com.example.formation.enums.TypeJustificatif;
 import jakarta.persistence.Entity;
-import enums.StatutJustificatif;
-import enums.TypeJustificatif;
+
 
 public class Justificatif {
     private int id;
     private String contenu;
-    private  StatutJustificatif status;
-    private TypeJustificatif  justificatif ;
+    private StatutJustificatif status;
+    private TypeJustificatif justificatif ;
 
     public Justificatif(String contenu, int id, TypeJustificatif justificatif, StatutJustificatif status) {
         this.contenu = contenu;
