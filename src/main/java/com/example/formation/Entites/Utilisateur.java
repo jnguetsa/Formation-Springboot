@@ -11,19 +11,17 @@ public class Utilisateur {
     protected String nom;
     protected String email;
     protected String telephon;
-
-    // ⭐⭐ CONSTRUCTEUR SANS ARGUMENT (déjà présent - à garder) ⭐⭐
     public Utilisateur() {
     }
-
-    // ⭐⭐ AJOUT : NOUVEAU CONSTRUCTEUR SANS ID ⭐⭐
     public Utilisateur(String nom, String email, String telephon) {
         this.nom = nom;
         this.email = email;
         this.telephon = telephon;
     }
 
-    // ⭐⭐ ANCIEN CONSTRUCTEUR AVEC ID (à garder pour compatibilité) ⭐⭐
+
+
+
     public Utilisateur(int id, String nom, String email, String telephon) {
         this.id = id;
         this.nom = nom;

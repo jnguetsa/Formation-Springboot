@@ -13,9 +13,9 @@ public class Surveillant extends  Utilisateur {
         private  String telephone;
 
 
-    public Surveillant(int id, String nom, String email, String telephon, int id1, String email1, String nom1, String telephone) {
-        super(id, nom, email, telephon);
-        this.id = id1;
+    public Surveillant( String nom, String email, String telephon, String email1, String nom1, String telephone) {
+        super( nom, email, telephon);
+
         this.email = email1;
         this.nom = nom1;
         this.telephone = telephone;
@@ -31,15 +31,8 @@ public class Surveillant extends  Utilisateur {
         this.email = email;
     }
 
-    @Override
-    public int getId() {
-        return id;
-    }
 
-    @Override
-    public void setId(int id) {
-        this.id = id;
-    }
+
 
     @Override
     public String getNom() {
