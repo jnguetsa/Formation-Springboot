@@ -1,9 +1,15 @@
 package com.example.formation.Entites;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 public class Utilisateur {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -11,53 +17,5 @@ public class Utilisateur {
     protected String nom;
     protected String email;
     protected String telephon;
-    public Utilisateur() {
-    }
-    public Utilisateur(String nom, String email, String telephon) {
-        this.nom = nom;
-        this.email = email;
-        this.telephon = telephon;
-    }
 
-
-
-
-    public Utilisateur(int id, String nom, String email, String telephon) {
-        this.id = id;
-        this.nom = nom;
-        this.email = email;
-        this.telephon = telephon;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getTelephon() {
-        return telephon;
-    }
-
-    public void setTelephon(String telephon) {
-        this.telephon = telephon;
-    }
 }

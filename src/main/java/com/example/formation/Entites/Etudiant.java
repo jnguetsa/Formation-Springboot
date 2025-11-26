@@ -6,10 +6,16 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.*;
 
 
 import java.util.Date;
+@EqualsAndHashCode(callSuper = true)
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
 public class Etudiant extends Utilisateur {
 
 
@@ -22,62 +28,5 @@ public class Etudiant extends Utilisateur {
 
     private Date date_naissance;
 
-    public Etudiant(int id, String nom, String email, String telephon, String adresse, Date date_naissance, String matricule, TypeNiveau niveau, String prenom, TypeSexe sexe) {
-        super(id, nom, email, telephon);
-        this.adresse = adresse;
-        this.date_naissance = date_naissance;
-        this.matricule = matricule;
-        this.niveau = niveau;
-        this.prenom = prenom;
-        this.sexe = sexe;
-    }
-
-    public String getAdresse() {
-        return adresse;
-    }
-
-    public void setAdresse(String adresse) {
-        this.adresse = adresse;
-    }
-
-    public Date getDate_naissance() {
-        return date_naissance;
-    }
-
-    public void setDate_naissance(Date date_naissance) {
-        this.date_naissance = date_naissance;
-    }
-
-    public String getMatricule() {
-        return matricule;
-    }
-
-    public void setMatricule(String matricule) {
-        this.matricule = matricule;
-    }
-
-    public TypeNiveau getNiveau() {
-        return niveau;
-    }
-
-    public void setNiveau(TypeNiveau niveau) {
-        this.niveau = niveau;
-    }
-
-    public String getPrenom() {
-        return prenom;
-    }
-
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
-    }
-
-    public TypeSexe getSexe() {
-        return sexe;
-    }
-
-    public void setSexe(TypeSexe sexe) {
-        this.sexe = sexe;
-    }
 }
 
