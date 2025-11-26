@@ -7,8 +7,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
+
 public class FICHE_PRESENCE {
     private int id;
     private Date date;
