@@ -18,6 +18,4 @@ public class Annee_academique {
     private  String nom;
     private Date date_debut;
     private Date date_fin;
-
-
 }
