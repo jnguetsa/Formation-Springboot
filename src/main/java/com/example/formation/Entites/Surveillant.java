@@ -8,18 +8,7 @@ import lombok.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
+
 @PrimaryKeyJoinColumn(name = "id")
 public class Surveillant extends  Utilisateur {
-
-
-
-        private  String telephone;
-
-
-
-
-
-
 }

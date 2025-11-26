@@ -12,12 +12,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class AssistantPedagogique {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-    private String nom;
-    private String email;
-
+public class AssistantPedagogique extends Utilisateur {
 
 }

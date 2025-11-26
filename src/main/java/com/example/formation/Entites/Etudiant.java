@@ -15,18 +15,12 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Setter
 public class Etudiant extends Utilisateur {
-
-
-    private String prenom;
-    private String adresse;
-
-    private String  matricule;
-    private TypeNiveau niveau;
-    private TypeSexe sexe;
-
-    private Date date_naissance;
+    private String  Matricule;
+    private TypeNiveau Niveau;
+    private TypeSexe Sexe;
+    private boolean StatutRetard;
+    private Date Date_naissance;
 
 }
 

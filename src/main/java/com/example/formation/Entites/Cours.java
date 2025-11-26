@@ -10,10 +10,11 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
+@Entity
 public class Cours {
-    private  int id ;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private  Long id ;
     private  String titre;
     private int  nb_heure;
     private  int nb_credit;

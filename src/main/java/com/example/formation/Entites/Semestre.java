@@ -2,19 +2,23 @@ package com.example.formation.Entites;
 
 import com.example.formation.enums.Num_semestre;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.*;
 
 import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
+@Entity
+
 public class Semestre {
-    private  int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private  Long id;
     private Num_semestre semestre;
     private Date date_debut;
     private Date date_fin;
 
 }
-//1FQCOMJH9J8@2025

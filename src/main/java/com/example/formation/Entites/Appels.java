@@ -1,6 +1,5 @@
 package com.example.formation.Entites;
 
-import jakarta.persistence.Entity;
 import lombok.*;
 
 import java.util.Date;
@@ -8,12 +7,12 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class FICHE_PRESENCE {
-    private int id;
+public class Appels {
+    private Long ssid;
     private Date date;
     private Date date_debut;
     private Date date_fin;
-
+    private  Long Nb_presensence ;
 
 
 

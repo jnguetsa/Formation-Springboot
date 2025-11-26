@@ -1,14 +1,24 @@
 package com.example.formation.Entites;
 
+import jakarta.persistence.*;
 import lombok.*;
+import java.util.ArrayList;
+import java.util.Collection;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Setter
-@Getter
+@Entity
 public class Permission {
 
-    public String Nom;
-    public  String Description;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String nom;
+
+    private String description;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    private Collection<Role> roles = new ArrayList<>();
 }

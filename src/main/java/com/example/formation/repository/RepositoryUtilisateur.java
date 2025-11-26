@@ -1,4 +1,7 @@
 package com.example.formation.repository;
 
-public interface RepositoryUtilisateur {
+import com.example.formation.Entites.Utilisateur;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface RepositoryUtilisateur extends JpaRepository<Utilisateur, Long>{
 }

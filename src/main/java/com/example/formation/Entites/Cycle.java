@@ -10,13 +10,12 @@ import lombok.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
+
 @Entity
 public class Cycle {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  int id;
+    private  Long id;
     private TypeNiveau niveau;
     private String  specialite;
 }

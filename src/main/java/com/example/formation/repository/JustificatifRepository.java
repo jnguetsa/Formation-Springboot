@@ -1,4 +1,7 @@
 package com.example.formation.repository;
 
-public interface JustificatifRepository {
+import com.example.formation.Entites.Justificatif;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface JustificatifRepository extends JpaRepository<Justificatif, Long> {
 }

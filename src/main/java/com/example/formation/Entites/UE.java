@@ -1,19 +1,24 @@
 package com.example.formation.Entites;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.*;
 
 import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
+@Entity
 public class UE {
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String nom;
     private String code;
     private Date nb_heure;
-    private Date credit;
+    private int credit;
+    private Date Date_creation;
 
 }
