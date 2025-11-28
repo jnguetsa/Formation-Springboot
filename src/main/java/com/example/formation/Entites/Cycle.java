@@ -1,13 +1,10 @@
 package com.example.formation.Entites;
 
 import com.example.formation.enums.TypeNiveau;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.util.Collection;
 
 
 @Data
@@ -21,4 +18,8 @@ public class Cycle {
     private  Long id;
     private TypeNiveau niveau;
     private String  specialite;
+    @ManyToOne
+    private Filiere filiere;
+    @ManyToOne
+    private Ecole ecole;
 }

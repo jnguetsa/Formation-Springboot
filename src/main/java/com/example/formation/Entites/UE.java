@@ -1,11 +1,9 @@
 package com.example.formation.Entites;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.Collection;
 import java.util.Date;
 @Data
 @AllArgsConstructor
@@ -20,5 +18,7 @@ public class UE {
     private Date nb_heure;
     private int credit;
     private Date Date_creation;
+    @OneToMany(mappedBy = "ue")
+    private Collection<Seance_Cours> seanceCours;
 
 }

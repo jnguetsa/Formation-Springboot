@@ -1,20 +1,16 @@
 package com.example.formation.Entites;
 
 import com.example.formation.enums.Num_semestre;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import lombok.*;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-
 public class Semestre {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,5 +18,10 @@ public class Semestre {
     private Num_semestre semestre;
     private Date date_debut;
     private Date date_fin;
+    @ManyToMany
+    private Collection<Seance_Cours> seanceCours= new ArrayList<>();
+    @ManyToOne
+    private Annee_academique anneeAcademique;
+
 
 }

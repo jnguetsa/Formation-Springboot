@@ -1,20 +1,15 @@
 package com.example.formation.Entites;
+import jakarta.persistence.*;
+import lombok.*;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-
 public class Appels {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,7 +18,16 @@ public class Appels {
     private Date date_debut;
     private Date date_fin;
     private  Long Nb_presensence ;
-
-
-
+    @ManyToMany
+    private Collection<Surveillant> surveillant=new ArrayDeque<>();
+    @ManyToMany
+    private Collection<Enseignant> enseignant= new ArrayList<>();
+    @OneToMany(mappedBy = "appels")
+    private Collection<Etudiant> etudiant;
+    @ManyToOne
+    private AssistantPedagogique assistantPedagogique;
+    @OneToMany(mappedBy = "appels")
+    private Collection<Seance_Cours> seanceCours;
+    @ManyToOne
+    private ValidationPresence validationPresence;
 }

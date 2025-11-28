@@ -1,12 +1,10 @@
 package com.example.formation.Entites;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.util.ArrayList;
+import java.util.Collection;
 
 @Data
 @NoArgsConstructor
@@ -22,5 +20,9 @@ public class Institut {
     private  String email;
     private  String telephone;
     private  String localite;
+    @ManyToMany(fetch = FetchType.EAGER)
+    private Collection<Utilisateur> utilisateur= new ArrayList<>();
+    @OneToMany(mappedBy = "institut")
+    private Collection<Ecole> ecole;
 
 }

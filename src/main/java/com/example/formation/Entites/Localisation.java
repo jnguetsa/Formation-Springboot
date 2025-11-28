@@ -1,18 +1,13 @@
 package com.example.formation.Entites;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.Date;
-
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+
 @Entity
 public class Localisation {
     @Id
@@ -21,5 +16,6 @@ public class Localisation {
         private int Longitude;
         private  int Latitude;
         private Date Date;
-
+@ManyToOne
+    private Utilisateur utilisateur;
 }

@@ -2,13 +2,12 @@ package com.example.formation.Entites;
 
 import com.example.formation.enums.StatutJustificatif;
 import com.example.formation.enums.TypeJustificatif;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import  lombok.Data;
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Date;
 
 @Data
 @AllArgsConstructor
@@ -21,10 +20,13 @@ public class Justificatif {
     private String contenu;
     private StatutJustificatif status;
     private TypeJustificatif justificatif ;
-    private Data DateDecision;
+    private Date DateDecision;
     private String Commentaire;
 
-
-
-
+    @ManyToOne
+    private AssistantPedagogique assistantPedagogique;
+    @OneToMany(mappedBy = "justificatif")
+    private Collection<Seance_Cours> seance;
+    @ManyToMany(mappedBy = "justificatif")
+    private  Collection<Fichier> fichier= new ArrayList<>();
 }

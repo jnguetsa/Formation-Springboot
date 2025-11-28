@@ -1,19 +1,16 @@
 package com.example.formation.Entites;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.PrimaryKeyJoinColumn;
-
+import jakarta.persistence.ManyToMany;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-import lombok.Data;
 
-
+import java.util.ArrayList;
+import java.util.Collection;
 
 @Entity
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 
-@PrimaryKeyJoinColumn(name = "id")
 public class Surveillant extends  Utilisateur {
+    @ManyToMany(mappedBy = "surveillant")
+    private Collection<Appels> appels= new ArrayList<>();
 }
