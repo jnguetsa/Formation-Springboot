@@ -3,7 +3,6 @@ import jakarta.persistence.*;
 import lombok.*;
 
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 @Data
@@ -11,8 +10,8 @@ import java.util.Date;
 @AllArgsConstructor
 
 @Entity
-@Table(name="annee_academique")
-public class Annee_academique {
+
+public class AnneeAcademique {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;

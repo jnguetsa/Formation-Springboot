@@ -26,7 +26,7 @@ public class Justificatif {
     @ManyToOne
     private AssistantPedagogique assistantPedagogique;
     @OneToMany(mappedBy = "justificatif")
-    private Collection<Seance_Cours> seance;
+    private Collection<SeanceCours> seance;
     @ManyToMany(mappedBy = "justificatif")
     private  Collection<Fichier> fichier= new ArrayList<>();
 }

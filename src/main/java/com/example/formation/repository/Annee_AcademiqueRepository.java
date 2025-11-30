@@ -1,7 +1,7 @@
 package com.example.formation.repository;
 
-import com.example.formation.Entites.Annee_academique;
+import com.example.formation.Entites.AnneeAcademique;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface Annee_AcademiqueRepository extends JpaRepository<Annee_academique, Long> {
+public interface Annee_AcademiqueRepository extends JpaRepository<AnneeAcademique, Long> {
 }

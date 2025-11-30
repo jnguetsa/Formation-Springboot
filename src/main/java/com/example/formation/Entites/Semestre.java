@@ -19,9 +19,9 @@ public class Semestre {
     private Date date_debut;
     private Date date_fin;
     @ManyToMany
-    private Collection<Seance_Cours> seanceCours= new ArrayList<>();
+    private Collection<SeanceCours> seanceCours= new ArrayList<>();
     @ManyToOne
-    private Annee_academique anneeAcademique;
+    private AnneeAcademique anneeAcademique;
 
 
 }

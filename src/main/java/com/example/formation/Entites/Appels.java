@@ -27,7 +27,7 @@ public class Appels {
     @ManyToOne
     private AssistantPedagogique assistantPedagogique;
     @OneToMany(mappedBy = "appels")
-    private Collection<Seance_Cours> seanceCours;
+    private Collection<SeanceCours> seanceCours;
     @ManyToOne
     private ValidationPresence validationPresence;
 }

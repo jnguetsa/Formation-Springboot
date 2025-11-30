@@ -19,6 +19,6 @@ public class UE {
     private int credit;
     private Date Date_creation;
     @OneToMany(mappedBy = "ue")
-    private Collection<Seance_Cours> seanceCours;
+    private Collection<SeanceCours> seanceCours;
 
 }

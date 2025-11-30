@@ -10,7 +10,7 @@ import java.util.Collection;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Seance_Cours {
+public class SeanceCours {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id ;
